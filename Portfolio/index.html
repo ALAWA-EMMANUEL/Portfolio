@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Nico Ackerman - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header Section -->
      <header>
-        <img class="logo" src="./image/pfp.jpg" alt="Profile Picture">
-        <h2>Nico Ackerman</h2>
-        <nav class="navbar">
-            <ul id="navLinks" class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div id="hamburger" class="ham">&#9776;</div>
-        </nav>
+        <div class="header-content">
+            <div class="header-info">
+                <img class="logo" src="./image/pfp.jpg" alt="Profile Picture">
+                <h2>Nico Ackerman</h2>
+                <div id="hamburger" class="ham">&#9776;</div>
+            </div>
+            <nav class="navbar">
+                <ul id="navLinks" class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
      </header>
 
      <!-- Landing Section -->
@@ -60,13 +64,21 @@
         <img src="images/project1.jpg" alt="Project 1">
         <h3>Project One</h3>
         <p>Short description of the project.</p>
-        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+        <div class="project-links">
+            <a href="#" target="_blank">Live Demo</a> 
+            <span>|</span>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
       </div>
       <div class="project-card">
         <img src="images/project2.jpg" alt="Project 2">
         <h3>Project Two</h3>
         <p>Short description of the project.</p>
-        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+        <div class="project-links">
+            <a href="#" target="_blank">Live Demo</a> 
+            <span>|</span>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
       </div>
     </div>
   </section>
@@ -87,6 +99,6 @@
     <p>© 2025 Nico Ackerman | Built with HTML, CSS & JS</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
