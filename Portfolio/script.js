@@ -16,6 +16,9 @@ navLinksAll.forEach(link => {
         const targetId = link.getAttribute('href');
         const targetSection = document.querySelector(targetId);
 
+        // Close mobile menu if open
+        navLinks.classList.remove('active');
+
         // Smooth scroll
         targetSection.scrollIntoView({ behavior: 'smooth' });
 
@@ -54,4 +57,14 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
     e.preventDefault();
     alert("Message sent successfully");
     this.reset();
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const isHamClick = e.target.closest('#hamburger');
+    const isNavClick = e.target.closest('.nav-links');
+    
+    if (!isHamClick && !isNavClick && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+    }
 });
